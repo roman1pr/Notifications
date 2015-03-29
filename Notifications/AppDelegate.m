@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "ASGovernment.h"
+#import "ASBusinessman.h"
 
 @interface AppDelegate ()
+
+@property(strong ,nonatomic) ASGovernment * government;
 
 @end
 
@@ -17,7 +21,53 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(governmentNotification:)
+                                                 name:ASGovernmentTaxLevelDidChangeNotification
+                                               object:nil];
+    
+    
+    self.government = [[ASGovernment alloc] init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(governmentNotification:)
+                                                 name:ASGovernmentSalaryDidChangeNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(governmentNotification:)
+                                                 name:ASGovernmentPensionDidChangeNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(governmentNotification:)
+                                                 name:ASGovernmentAveragePriceDidChangeNotification
+                                               object:nil];
+    
+    self.government.taxLevel = 11;
+    self.government.pension = 200;
+    self.government.salary = 1200;
+    self.government.averagePrice = 400;
+    
+    ASBusinessman * bus = [[ASBusinessman alloc] init];
+    bus.salary = 200;
+    
+    self.government.salary = 3000;
+    
     return YES;
+}
+
+-(void) governmentNotification: (NSNotification*) notification{
+ 
+    NSLog(@"Government notification - userInfo %@", notification.userInfo );
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

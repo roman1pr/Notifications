@@ -14,6 +14,8 @@
 		30DF50C51AC8327200D69297 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DF50C41AC8327200D69297 /* Images.xcassets */; };
 		30DF50C81AC8327200D69297 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DF50C61AC8327200D69297 /* LaunchScreen.xib */; };
 		30DF50D41AC8327200D69297 /* NotificationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF50D31AC8327200D69297 /* NotificationsTests.m */; };
+		30DF50DE1AC8349500D69297 /* ASGovernment.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF50DD1AC8349500D69297 /* ASGovernment.m */; };
+		30DF50E01AC834CF00D69297 /* ASBusinessman.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF50DF1AC834CF00D69297 /* ASBusinessman.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3087B5C81AC8366200658518 /* ASGovernment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASGovernment.h; sourceTree = "<group>"; };
+		3087B5C91AC8367300658518 /* ASBusinessman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBusinessman.h; sourceTree = "<group>"; };
 		30DF50B41AC8327200D69297 /* Notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DF50B81AC8327200D69297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30DF50B91AC8327200D69297 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		30DF50CD1AC8327200D69297 /* NotificationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotificationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DF50D21AC8327200D69297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30DF50D31AC8327200D69297 /* NotificationsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationsTests.m; sourceTree = "<group>"; };
+		30DF50DD1AC8349500D69297 /* ASGovernment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASGovernment.m; sourceTree = "<group>"; };
+		30DF50DF1AC834CF00D69297 /* ASBusinessman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBusinessman.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,10 @@
 		30DF50B61AC8327200D69297 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				3087B5C81AC8366200658518 /* ASGovernment.h */,
+				30DF50DD1AC8349500D69297 /* ASGovernment.m */,
+				3087B5C91AC8367300658518 /* ASBusinessman.h */,
+				30DF50DF1AC834CF00D69297 /* ASBusinessman.m */,
 				30DF50BB1AC8327200D69297 /* AppDelegate.h */,
 				30DF50BC1AC8327200D69297 /* AppDelegate.m */,
 				30DF50BE1AC8327200D69297 /* ViewController.h */,
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DF50E01AC834CF00D69297 /* ASBusinessman.m in Sources */,
 				30DF50C01AC8327200D69297 /* ViewController.m in Sources */,
 				30DF50BD1AC8327200D69297 /* AppDelegate.m in Sources */,
+				30DF50DE1AC8349500D69297 /* ASGovernment.m in Sources */,
 				30DF50BA1AC8327200D69297 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +424,7 @@
 				30DF50D91AC8327200D69297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30DF50DA1AC8327200D69297 /* Build configuration list for PBXNativeTarget "NotificationsTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				30DF50DC1AC8327200D69297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
